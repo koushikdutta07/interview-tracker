@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav id="main-nav" class="hidden">
+    <div class="nav-inner">
+      <a href="#dashboard" class="nav-brand">
+        <span class="nav-logo">📋</span>
+        <span>Interview<strong>Tracker</strong></span>
+      </a>
+      <div class="nav-right">
+        <span class="nav-user">
+          <span class="user-dot"></span>
+          <span id="nav-username">User</span>
+        </span>
+        <button class="btn btn-ghost btn-sm" id="btn-logout">Sign Out</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Main content area (pages render here) ──────────────────────────── -->
+  <main id="app-root">
+    <div class="page-loader">
+      <div class="spinner"></div>
+    </div>
+  </main>
+
+  <!-- ── Toast notification container ──────────────────────────────────── -->
+  <div id="toast-container"></div>
+
+  <!-- ── Scripts ─────────────────────────────────────────────────────────── -->
+  <!-- Axios CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- App modules (order matters!) -->
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+  <script src="pages/auth.js"></script>
+  <script src="pages/dashboard.js"></script>
+  <script src="pages/detail.js"></script>
+
+  <!-- Route registration (after all page modules are loaded) -->
+  <script>
+    Router.register("#login", renderLoginPage);
+    Router.register("#signup", renderSignupPage);
+    Router.register("#dashboard", renderDashboard);
+    Router.register("#app/:id", renderDetailPage);
+  </script>
+
+</body>
+</html>

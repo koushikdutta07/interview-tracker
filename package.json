@@ -1,0 +1,10 @@
+{
+  "name": "interview-tracker",
+  "version": "1.0.0",
+  "description": "Interview Tracker + Smart Prep Assistant — Full-Stack Project",
+  "scripts": {
+    "start": "cd backend && node server.js",
+    "dev": "cd backend && npx nodemon server.js",
+    "install-deps": "cd backend && npm install"
+  }
+}
