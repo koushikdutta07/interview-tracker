@@ -275,3 +275,4 @@ No match on role → fallback to general DSA + OOP + behavioral topics.
 
 <img width="1914" height="854" alt="image" src="https://github.com/user-attachments/assets/c43e249e-3e72-4d59-a9e7-ddd6b04cae50" />
 <img width="1896" height="850" alt="image" src="https://github.com/user-attachments/assets/cf4e2606-5fed-48d4-b08c-bb9660b7bbdb" />
+<img width="1919" height="859" alt="image" src="https://github.com/user-attachments/assets/1e1559e2-a03a-4227-b687-738f04ff0041" />
